@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C12989AF736121401E35C46 /* Pods_iosChartsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2DF02143048753E1F5B6F59 /* Pods_iosChartsApp.framework */; };
 		CE66347D2013CE6400D8FF1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66347C2013CE6400D8FF1C /* AppDelegate.swift */; };
 		CE66347F2013CE6400D8FF1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66347E2013CE6400D8FF1C /* ViewController.swift */; };
 		CE6634822013CE6400D8FF1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6634802013CE6400D8FF1C /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		CE6634832013CE6400D8FF1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE6634862013CE6400D8FF1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE6634882013CE6400D8FF1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD6BBEB96A40FD6F6ADE732A /* Pods-iosChartsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosChartsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosChartsApp/Pods-iosChartsApp.release.xcconfig"; sourceTree = "<group>"; };
+		E2DF02143048753E1F5B6F59 /* Pods_iosChartsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosChartsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7775F58DAA61D2E2B8CB5CD /* Pods-iosChartsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosChartsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosChartsApp/Pods-iosChartsApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C12989AF736121401E35C46 /* Pods_iosChartsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE751FE7D2B29D1DAE482872 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7775F58DAA61D2E2B8CB5CD /* Pods-iosChartsApp.debug.xcconfig */,
+				DD6BBEB96A40FD6F6ADE732A /* Pods-iosChartsApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BCF2CDB24AA6B9D553012DAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2DF02143048753E1F5B6F59 /* Pods_iosChartsApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE6634702013CE6400D8FF1C = {
 			isa = PBXGroup;
 			children = (
 				CE66347B2013CE6400D8FF1C /* iosChartsApp */,
 				CE66347A2013CE6400D8FF1C /* Products */,
+				AE751FE7D2B29D1DAE482872 /* Pods */,
+				BCF2CDB24AA6B9D553012DAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE66348B2013CE6400D8FF1C /* Build configuration list for PBXNativeTarget "iosChartsApp" */;
 			buildPhases = (
+				EDC093D99095B838CB07D885 /* [CP] Check Pods Manifest.lock */,
 				CE6634752013CE6400D8FF1C /* Sources */,
 				CE6634762013CE6400D8FF1C /* Frameworks */,
 				CE6634772013CE6400D8FF1C /* Resources */,
+				DCAA03690BE45931D009F803 /* [CP] Embed Pods Frameworks */,
+				1B694197B837EC93995E63A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B694197B837EC93995E63A1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosChartsApp/Pods-iosChartsApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCAA03690BE45931D009F803 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosChartsApp/Pods-iosChartsApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDC093D99095B838CB07D885 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE6634752013CE6400D8FF1C /* Sources */ = {
@@ -272,6 +347,7 @@
 		};
 		CE66348C2013CE6400D8FF1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7775F58DAA61D2E2B8CB5CD /* Pods-iosChartsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +363,7 @@
 		};
 		CE66348D2013CE6400D8FF1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD6BBEB96A40FD6F6ADE732A /* Pods-iosChartsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
