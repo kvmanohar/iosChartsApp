@@ -59,6 +59,8 @@ class ViewController: UIViewController {
         // Formating the chart
         // https://stackoverflow.com/questions/34518228/hide-bottom-x-axis-in-horizontal-bar-chart
         
+        barChartView.isUserInteractionEnabled = false
+        
         barChartView.noDataText = "You have not practised any words in last 10 days."
         barChartView.noDataTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         barChartView.chartDescription?.text = ""
@@ -113,12 +115,12 @@ class ViewController: UIViewController {
         let cData = LineChartData()
         cData.addDataSet(cDataSet)
         
-
-        
+        lineChartView.data = cData
         
         //Format Line chart
+        lineChartView.isUserInteractionEnabled = false
+        
         lineChartView.legend.enabled = false
-        lineChartView.data = cData
         lineChartView.chartDescription?.text = "Your practice last week."
         
         
