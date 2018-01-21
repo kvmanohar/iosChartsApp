@@ -13,6 +13,7 @@
 		CE6634822013CE6400D8FF1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6634802013CE6400D8FF1C /* Main.storyboard */; };
 		CE6634842013CE6400D8FF1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6634832013CE6400D8FF1C /* Assets.xcassets */; };
 		CE6634872013CE6400D8FF1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6634852013CE6400D8FF1C /* LaunchScreen.storyboard */; };
+		CE66348F2014E5D600D8FF1C /* RoundUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66348E2014E5D600D8FF1C /* RoundUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		CE6634832013CE6400D8FF1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE6634862013CE6400D8FF1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE6634882013CE6400D8FF1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE66348E2014E5D600D8FF1C /* RoundUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUIView.swift; sourceTree = "<group>"; };
 		DD6BBEB96A40FD6F6ADE732A /* Pods-iosChartsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosChartsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosChartsApp/Pods-iosChartsApp.release.xcconfig"; sourceTree = "<group>"; };
 		E2DF02143048753E1F5B6F59 /* Pods_iosChartsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosChartsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7775F58DAA61D2E2B8CB5CD /* Pods-iosChartsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosChartsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosChartsApp/Pods-iosChartsApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				CE6634832013CE6400D8FF1C /* Assets.xcassets */,
 				CE6634852013CE6400D8FF1C /* LaunchScreen.storyboard */,
 				CE6634882013CE6400D8FF1C /* Info.plist */,
+				CE66348E2014E5D600D8FF1C /* RoundUIView.swift */,
 			);
 			path = iosChartsApp;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			files = (
 				CE66347F2013CE6400D8FF1C /* ViewController.swift in Sources */,
 				CE66347D2013CE6400D8FF1C /* AppDelegate.swift in Sources */,
+				CE66348F2014E5D600D8FF1C /* RoundUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

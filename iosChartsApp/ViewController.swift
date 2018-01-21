@@ -12,14 +12,16 @@ import Charts
 class ViewController: UIViewController {
 
     @IBOutlet weak var barChartView: BarChartView!
+    @IBOutlet weak var lineChartView: LineChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"]
-        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 5.0, 10.0]
+        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"]
+        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 5.0, 10.0, 15.0]
+        let valueForLineChart: [Int] = [20, 4, 6, 3, 12, 16, 4, 5, 10, 15]
         
-        setChart(dataPoint: months, values: unitsSold)
-    
+        setBarChart(dataPoint: months, values: unitsSold)
+        setLineChart(dataPoint: months, values: valueForLineChart)
         
     }
 
@@ -30,7 +32,7 @@ class ViewController: UIViewController {
 
     
     //MARK: Local functions
-    func setChart(dataPoint: [String], values: [Double]){
+    func setBarChart(dataPoint: [String], values: [Double]){
         
         /*
         Build
@@ -39,19 +41,20 @@ class ViewController: UIViewController {
             - ChartData
         */
         
+        //ChartDataEntries
         var dataEntries: [BarChartDataEntry] = []
-        let data = BarChartData()
         for i in 0..<dataPoint.count{
             let dataEntry = BarChartDataEntry(x: Double(i), y: Double(values[i]))
             dataEntries.append(dataEntry)
         }
         
+        //ChartDataset
         let ds1 = BarChartDataSet(values: dataEntries, label: nil)
         
+        //ChartData
+        let data = BarChartData()
         data.addDataSet(ds1)
         barChartView.data = data
-        
-        
         
         // Formating the chart
         // https://stackoverflow.com/questions/34518228/hide-bottom-x-axis-in-horizontal-bar-chart
@@ -78,9 +81,62 @@ class ViewController: UIViewController {
         barChartView.rightAxis.drawLabelsEnabled = false
         barChartView.rightAxis.drawAxisLineEnabled = false
         
-        
         barChartView.fitBars = true
         
+    }
+    
+    //MARK: LineChar
+    func setLineChart(dataPoint: [String], values: [Int]){
+        /*
+         Build
+         - ChartDataEntries
+         - ChartDataSet
+         - ChartData
+         */
+        
+        //ChartDatEntries
+        var chartDataEntries: [ChartDataEntry] = []
+        for i in 0..<dataPoint.count {
+            let value = ChartDataEntry(x: Double(i), y: Double(values[i]))
+            chartDataEntries.append(value)
+        }
+        
+        //CharDataSet
+        let cDataSet = LineChartDataSet(values: chartDataEntries, label: nil)
+        cDataSet.colors = [NSUIColor.blue]
+        cDataSet.circleHoleRadius = 0.0
+        cDataSet.circleRadius = 3.0
+        cDataSet.circleColors = [#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)]
+        
+        
+        //ChartData
+        let cData = LineChartData()
+        cData.addDataSet(cDataSet)
+        
+
+        
+        
+        //Format Line chart
+        lineChartView.legend.enabled = false
+        lineChartView.data = cData
+        lineChartView.chartDescription?.text = "Your practice last week."
+        
+        
+        let xAxis = lineChartView.xAxis
+        xAxis.valueFormatter = IndexAxisValueFormatter(values: dataPoint)
+        xAxis.labelPosition = .bottom
+        xAxis.drawGridLinesEnabled = false
+        xAxis.granularity = 1.0
+    
+        let rightAxis = lineChartView.rightAxis
+        rightAxis.drawGridLinesEnabled = false
+        rightAxis.drawLabelsEnabled = false
+        rightAxis.drawAxisLineEnabled = false
+        
+        let leftAxis = lineChartView.leftAxis
+        leftAxis.drawGridLinesEnabled = false
+        leftAxis.drawLabelsEnabled = false
+        leftAxis.drawAxisLineEnabled = false
         
     }
 

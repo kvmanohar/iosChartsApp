@@ -24,37 +24,57 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ncb-1P-WKX">
-                                <rect key="frame" x="10" y="111" width="355" height="250"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ncb-1P-WKX" customClass="RoundUIView" customModule="iosChartsApp" customModuleProvider="target">
+                                <rect key="frame" x="10" y="91" width="355" height="200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8VH-JV-ktc" customClass="BarChartView" customModule="Charts">
-                                        <rect key="frame" x="8" y="8" width="339" height="234"/>
+                                        <rect key="frame" x="8" y="8" width="339" height="184"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="8VH-JV-ktc" secondAttribute="bottom" constant="8" id="GGw-Rr-yPl"/>
-                                    <constraint firstAttribute="height" constant="250" id="J5s-q7-3Pn"/>
+                                    <constraint firstAttribute="height" constant="200" id="J5s-q7-3Pn"/>
                                     <constraint firstItem="8VH-JV-ktc" firstAttribute="top" secondItem="Ncb-1P-WKX" secondAttribute="top" constant="8" id="UEJ-ap-gOj"/>
                                     <constraint firstAttribute="trailing" secondItem="8VH-JV-ktc" secondAttribute="trailing" constant="8" id="Wcs-2F-gwd"/>
                                     <constraint firstItem="8VH-JV-ktc" firstAttribute="leading" secondItem="Ncb-1P-WKX" secondAttribute="leading" constant="8" id="iPe-lb-U5P"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHM-EC-gv4" customClass="RoundUIView" customModule="iosChartsApp" customModuleProvider="target">
+                                <rect key="frame" x="10" y="311" width="355" height="200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0F-UM-Jj8" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="8" y="8" width="339" height="184"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.77721227940000004" blue="0.2636691572" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="C0F-UM-Jj8" firstAttribute="leading" secondItem="aHM-EC-gv4" secondAttribute="leading" constant="8" id="5Ti-ow-VXg"/>
+                                    <constraint firstAttribute="height" constant="200" id="WRt-Tm-bph"/>
+                                    <constraint firstItem="C0F-UM-Jj8" firstAttribute="top" secondItem="aHM-EC-gv4" secondAttribute="top" constant="8" id="rtp-2U-pAh"/>
+                                    <constraint firstAttribute="bottom" secondItem="C0F-UM-Jj8" secondAttribute="bottom" constant="8" id="wcI-Pz-xFH"/>
+                                    <constraint firstAttribute="trailing" secondItem="C0F-UM-Jj8" secondAttribute="trailing" constant="8" id="wz4-0l-Dlh"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="H9y-CD-TXh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="389-d5-Su3"/>
+                            <constraint firstItem="aHM-EC-gv4" firstAttribute="top" secondItem="Ncb-1P-WKX" secondAttribute="bottom" constant="20" id="6Ai-Pr-U2y"/>
                             <constraint firstItem="H9y-CD-TXh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="DBf-qy-5Yw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aHM-EC-gv4" secondAttribute="trailing" constant="10" id="JF6-Ef-582"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ncb-1P-WKX" secondAttribute="trailing" constant="10" id="NJb-Zc-K92"/>
+                            <constraint firstItem="aHM-EC-gv4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="QAS-ud-auu"/>
                             <constraint firstItem="Ncb-1P-WKX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="cPb-LS-gyF"/>
                             <constraint firstItem="Ncb-1P-WKX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q33-Zs-cwZ"/>
-                            <constraint firstItem="Ncb-1P-WKX" firstAttribute="top" secondItem="H9y-CD-TXh" secondAttribute="bottom" constant="40" id="tRt-eP-ivQ"/>
+                            <constraint firstItem="Ncb-1P-WKX" firstAttribute="top" secondItem="H9y-CD-TXh" secondAttribute="bottom" constant="20" id="tRt-eP-ivQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="barChartView" destination="8VH-JV-ktc" id="lKt-1V-LMM"/>
+                        <outlet property="lineChartView" destination="C0F-UM-Jj8" id="rg9-PA-eP8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
